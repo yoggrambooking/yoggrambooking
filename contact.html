@@ -1,47 +1,45 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - YogGram</title>
+  <title>Contact – Yogram Patanjali</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🌿 YogGram</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
+    <h1>Contact & Booking</h1>
   </header>
 
-  <main>
-    <h2>Contact Us</h2>
-    <p>📍 Location: Haridwar, Uttarakhand</p>
-    <p>📞 Phone: +91-9211872947</p>
-    <p>📧 Email: info@yoggram.in</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="treatments.html">Treatments</a>
+    <a href="contact.html">Contact</a>
+    <a href="payments.html">Payments</a>
+  </nav>
 
-    <h3>Send us a message</h3>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>नाम *</label>
-      <input type="text" name="name" required>
-
-      <label>ईमेल *</label>
-      <input type="email" name="email" required>
-
-      <label>संदेश *</label>
-      <textarea name="message" rows="4" required></textarea>
-
-      <button type="submit">भेजें</button>
+  <div class="container">
+    <h2>Book Your Treatment</h2>
+    <form action="https://formspree.io/f/xzzaaaoj" method="POST">
+      <!-- Replace xyzabcde with your Formspree endpoint -->
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <select name="treatment">
+        <option value="yoga">Yoga Therapy</option>
+        <option value="panchkarma">Panchkarma</option>
+        <option value="ayurveda">Ayurveda</option>
+        <option value="naturopathy">Naturopathy</option>
+      </select>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Submit Booking</button>
     </form>
-  </main>
+  </div>
 
   <footer>
-    <p>© <span id="year"></span> YogGram</p>
+    <p>© 2025 Yogram Patanjali. All Rights Reserved.</p>
   </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
