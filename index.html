@@ -1,149 +1,37 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YogGram – Home</title>
-  <meta name="description" content="YogGram Haridwar – Yoga, Ayurveda & Naturopathy booking and information.">
-  <style>
-    :root{
-      --green:#2e7d32; --dark:#1b5e20; --bg:#f7faf7;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#222}
-    /* Navbar */
-    nav{background:var(--green);padding:10px 0;position:sticky;top:0;z-index:10}
-    nav .wrap{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
-    nav a.brand{color:#fff;font-weight:800;text-decoration:none;font-size:22px}
-    nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
-    nav ul a{color:#fff;text-decoration:none;font-weight:600}
-    nav ul a:hover{color:#ffd54f}
-
-    /* Hero Slider */
-    .slider{max-width:1100px;margin:18px auto;border-radius:14px;overflow:hidden;position:relative;background:#ddd}
-    .slides{display:flex;transition:transform .6s ease;will-change:transform}
-    .slide{min-width:100%;height:380px}
-    .slide img{width:100%;height:100%;object-fit:cover;display:block}
-    .arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:none;
-      width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:20px}
-    .arrow:hover{background:rgba(0,0,0,.6)}
-    .arrow.prev{left:12px} .arrow.next{right:12px}
-    .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:8px;justify-content:center}
-    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.6);cursor:pointer;border:none}
-    .dot.active{background:#fff}
-
-    /* Section */
-    .container{max-width:1100px;margin:24px auto;padding:0 16px}
-    h1,h2{color:var(--green);text-align:center}
-    .cta{display:flex;gap:12px;justify-content:center;margin:16px 0 6px}
-    .btn{background:var(--green);color:#fff;border:none;padding:12px 18px;border-radius:8px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block}
-    .btn:hover{background:var(--dark)}
-    .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-    footer{margin:32px 0 24px;text-align:center;color:#555}
-    @media (max-width:640px){ .slide{height:250px} }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yogram Patanjali – Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Yogram Patanjali</h1>
+    <p>Yoga • Ayurveda • Naturopathy • Wellness</p>
+  </header>
 
-  <!-- Navbar -->
   <nav>
-    <div class="wrap">
-      <a class="brand" href="index.html">YogGram</a>
-      <ul>
-        <li><a href="index.html">होम</a></li>
-        <li><a href="about.html">हमारे बारे में</a></li>
-        <li><a href="contact.html">संपर्क</a></li>
-        <li><a href="booking.html">बुकिंग</a></li>
-      </ul>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="treatments.html">Treatments</a>
+    <a href="contact.html">Contact</a>
+    <a href="payments.html">Payments</a>
   </nav>
 
-  <!-- Image Slider -->
-  <section class="slider" id="hero">
-    <div class="slides" id="slides">
-      <div class="slide"><img src="images/yogpeeth-haridwar.jpg" alt="योगपीठ हरिद्वार"></div>
-      <div class="slide"><img src="images/haridwar-1.jpg" alt="हरिद्वार प्रवेश द्वार"></div>
-      <div class="slide"><img src="images/haridwar-2.jpg" alt="प्रसादम् भवन"></div>
-    </div>
-    <button class="arrow prev" aria-label="Previous" id="prev">&#10094;</button>
-    <button class="arrow next" aria-label="Next" id="next">&#10095;</button>
-    <div class="dots" id="dots"></div>
+  <section class="hero">
+    Welcome to Yogram Patanjali
   </section>
 
   <div class="container">
-    <h1>YogGram में आपका हार्दिक स्वागत है</h1>
-    <div class="cta">
-      <a class="btn" href="booking.html">अभी बुकिंग करें</a>
-      <a class="btn" href="tel:+919211872947">कॉल करें: 9211872947</a>
-    </div>
-
-    <div class="card">
-      <h2>योग, आयुर्वेद और नेचुरोपैथी का समन्वित केंद्र</h2>
-      <p>
-        योगग्राम हरिद्वार, परंपरागत भारतीय ज्ञान-विज्ञान और आधुनिक जीवन-शैली के बीच एक सुंदर सेतु का कार्य करता है। 
-        यहाँ योग, प्राणायाम, आहार-संयम, धातु-शुद्धि और प्राकृतिक चिकित्सा के माध्यम से शरीर, मन और आत्मा का 
-        संतुलन साधने पर बल दिया जाता है। योग्य प्रशिक्षकों के मार्गदर्शन में सुबह से रात तक सुव्यवस्थित दैनिक क्रम 
-        चलता है—जिसमें प्राणायाम, सूक्ष्म व्यायाम, समूह योग-सेशन, धूप-स्नान, जल-चिकित्सा, भाप-स्नान, मिट्टी 
-        उपचार और ध्यान जैसे कार्यक्रम शामिल हैं। प्रत्येक साधक की प्रकृति, उम्र और रोग-अवस्था के अनुसार 
-        व्यक्तिगत रूप से आहार योजना और थेरेपी तय की जाती है, ताकि उपचार सुरक्षित तथा प्रभावी रहे।
-      </p>
-      <p>
-        योगग्राम का भोजन सत्विक, पौष्टिक और पचने में सरल रखा जाता है। भोजनालय ‘प्रसादम्’ में स्थानीय और 
-        मौसमी सामग्री से बने व्यंजन दिए जाते हैं, जिनमें तेल-मसालों का संतुलित उपयोग होता है। हमारा विश्वास है 
-        कि सही भोजन ही सबसे पहली औषधि है। इसी तरह हर थेरेपी का उद्देश्य शरीर की स्वाभाविक उपचार-शक्ति को 
-        जगाना है—दवा के दुष्प्रभाव के बिना, प्रकृति के अनुकूल। यहाँ आने वाले अतिथि केवल इलाज कराकर नहीं 
-        लौटते, बल्कि एक नई जीवन-शैली सीखकर जाते हैं, जिसे घर लौटकर भी अपनाया जा सके।
-      </p>
-      <p>
-        सुखद, स्वच्छ और हरित परिसर, अनुशासित वातावरण और अनुभवी चिकित्सकों की टीम योगग्राम की 
-        पहचान है। परिवार की तरह देखभाल, समय पर परामर्श और प्रगति की सतत निगरानी से अधिकतर लोगों 
-        को वजन प्रबंधन, तनाव, थायरॉइड, मधुमेह, उच्च रक्तचाप, जोड़ों का दर्द, त्वचा व पाचन संबंधी समस्याओं 
-        में स्पष्ट लाभ अनुभव होता है। यदि आप अपने स्वास्थ्य में दीर्घकालीन परिवर्तन चाहते हैं, तो योगग्राम 
-        आपके लिए उत्तम शुरुआत है—जहाँ उपचार केवल रोग का नहीं, बल्कि जीवन का होता है। आज ही 
-        बुकिंग करें, और स्वस्थ, संतुलित व आनंदमय जीवन की ओर पहला कदम बढ़ाएँ।
-      </p>
-    </div>
+    <h2>Our Vision</h2>
+    <p>We provide authentic Yoga, Ayurveda, and holistic wellness programs in Haridwar, combining traditional healing with modern wellness practices.</p>
+    <img src="images/haridwar-1.jpg" width="100%">
   </div>
 
   <footer>
-    © YogGram Haridwar · सहायता: <a href="tel:+919211872947">+91 9211872947</a> · ईमेल: info@yoggram.org
+    <p>© 2025 Yogram Patanjali. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    // Simple Slider JS
-    const slides = document.getElementById('slides');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    const dotsBox = document.getElementById('dots');
-    const total = slides.children.length;
-    let index = 0, timer;
-
-    // create dots
-    for(let i=0;i<total;i++){
-      const b=document.createElement('button');
-      b.className='dot'+(i===0?' active':'');
-      b.setAttribute('aria-label','Go to slide '+(i+1));
-      b.addEventListener('click',()=>go(i));
-      dotsBox.appendChild(b);
-    }
-    const dots=[...dotsBox.children];
-
-    function update(){
-      slides.style.transform = `translateX(-${index*100}%)`;
-      dots.forEach((d,i)=>d.classList.toggle('active', i===index));
-    }
-    function go(i){
-      index=(i+total)%total; update(); restart();
-    }
-    function nextSlide(){ go(index+1); }
-    function prevSlide(){ go(index-1); }
-
-    next.addEventListener('click', nextSlide);
-    prev.addEventListener('click', prevSlide);
-
-    function auto(){ timer=setInterval(nextSlide, 4000); }
-    function restart(){ clearInterval(timer); auto(); }
-    auto();
-  </script>
 </body>
 </html>
