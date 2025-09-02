@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YogGram Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌿 YogGram</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#booking">Booking</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to YogGram</h2>
+    <p>स्वस्थ जीवन और प्राकृतिक उपचार के लिए आपका स्वागत है।</p>
+  </section>
+
+  <main>
+    <h2 id="booking">Book Your Stay</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label>पूरा नाम *</label>
+      <input type="text" name="name" required>
+
+      <label>मोबाइल नंबर *</label>
+      <input type="tel" name="phone" required>
+
+      <label>ईमेल</label>
+      <input type="email" name="email">
+
+      <label>लोगों की संख्या *</label>
+      <input type="number" name="guests" min="1" value="1" required>
+
+      <label>आगमन तिथि *</label>
+      <input type="date" name="checkin" required>
+
+      <label>प्रस्थान तिथि *</label>
+      <input type="date" name="checkout" required>
+
+      <label>आवास प्रकार</label>
+      <select name="room">
+        <option value="">-- चुनें --</option>
+        <option value="Private">Private Room</option>
+        <option value="Dormitory">Dormitory</option>
+        <option value="Suite">Suite</option>
+      </select>
+
+      <label>नोट्स</label>
+      <textarea name="notes" rows="4"></textarea>
+
+      <button type="submit">बुकिंग सबमिट करें</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> YogGram | Powered by Cloudflare Pages</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
