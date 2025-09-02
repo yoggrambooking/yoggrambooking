@@ -3,82 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YogGram Booking</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Yoggram Booking - Haridwar</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#fff; color:#333; }
+    header { background: url('Yogpeeth-Haridwar.jpg') no-repeat center/cover; height:90vh; display:flex; align-items:center; justify-content:center; flex-direction:column; color:white; text-shadow: 2px 2px 5px black; }
+    header h1 { font-size: 3rem; margin:0; }
+    header p { font-size: 1.2rem; }
+    header a { background:#ff6600; color:white; padding:15px 30px; text-decoration:none; border-radius:8px; margin-top:20px; font-weight:bold; }
+
+    section { padding:60px 10%; text-align:center; }
+    h2 { font-size:2rem; margin-bottom:20px; color:#c0392b; }
+
+    .gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .gallery img { width:100%; border-radius:10px; height:250px; object-fit:cover; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+
+    form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; text-align:left; }
+    input, textarea { padding:10px; border:1px solid #ccc; border-radius:6px; }
+    button { background:#27ae60; color:white; border:none; padding:12px; border-radius:6px; cursor:pointer; font-size:1rem; }
+    footer { background:#222; color:white; text-align:center; padding:20px; margin-top:40px; }
+  </style>
 </head>
 <body>
+
+  <!-- HERO -->
   <header>
-    <h1>🌿 YogGram</h1>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="#booking">Booking</a>
-    </nav>
+    <h1>योगग्राम - हरिद्वार</h1>
+    <p>स्वस्थ जीवन की ओर एक कदम - योग, आयुर्वेद एवं प्राकृतिक चिकित्सा</p>
+    <a href="#booking">📌 Book Now</a>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to YogGram</h2>
-    <p>स्वस्थ जीवन और प्राकृतिक उपचार के लिए आपका स्वागत है।</p>
+  <!-- ABOUT -->
+  <section>
+    <h2>योगग्राम परिचय</h2>
+    <p>योगग्राम पतंजलि योगपीठ का विशेष उपचार केंद्र है जहाँ पर योग, आयुर्वेद और प्राकृतिक चिकित्सा द्वारा अनेक रोगों का उपचार किया जाता है। यहाँ आने वाले लोगों को शुद्ध वातावरण, सात्विक भोजन और योग साधना का लाभ मिलता है।</p>
   </section>
 
-  <!-- 👉 नया Description Section -->
-  <section class="description">
-    <h2>हमारा उद्देश्य</h2>
-    <p>
-      योगग्राम एक ऐसा केंद्र है जहाँ प्राकृतिक चिकित्सा, आयुर्वेद, योग और ध्यान के माध्यम से 
-      लोगों को एक स्वस्थ और संतुलित जीवन जीने की प्रेरणा दी जाती है।  
-      यहाँ पर विभिन्न प्रकार की चिकित्सा पद्धतियों, संतुलित आहार और सकारात्मक जीवनशैली का अभ्यास कराया जाता है।  
-    </p>
-    <p>
-      हमारा ध्येय है कि प्रत्येक व्यक्ति तन, मन और आत्मा से स्वस्थ रहे और प्राकृतिक जीवनशैली अपनाकर 
-      दीर्घकालीन स्वास्थ्य का आनंद ले सके।
-    </p>
+  <!-- TREATMENTS -->
+  <section>
+    <h2>उपचार एवं सुविधाएँ</h2>
+    <p>👉 आयुर्वेदिक उपचार <br> 👉 योग एवं प्राणायाम <br> 👉 प्राकृतिक चिकित्सा <br> 👉 पंचकर्म थैरेपी <br> 👉 सात्विक भोजन एवं ध्यान</p>
   </section>
 
-  <main>
-    <h2 id="booking">Book Your Stay</h2>
+  <!-- GALLERY -->
+  <section>
+    <h2>फोटो गैलरी</h2>
+    <div class="gallery">
+      <img src="Yogpeeth-Haridwar.jpg" alt="Yoggram">
+      <img src="Haridwar-02.jpg" alt="Gate">
+      <img src="Haridwar-03.jpg" alt="Prasadam">
+      <img src="493bc4ca-6e10-46d8-8f45-bd36181cd492.png" alt="Yoga">
+      <img src="file-EvjZEyjckqicFbZdo3RSdG" alt="Camp">
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking">
+    <h2>बुकिंग फॉर्म</h2>
     <form action="https://formspree.io/f/xzzaaaoj" method="POST">
-      <label>पूरा नाम *</label>
+      <label>पूरा नाम:</label>
       <input type="text" name="name" required>
-
-      <label>मोबाइल नंबर *</label>
+      <label>मोबाइल नंबर:</label>
       <input type="tel" name="phone" required>
-
-      <label>ईमेल</label>
+      <label>ईमेल:</label>
       <input type="email" name="email">
-
-      <label>लोगों की संख्या *</label>
-      <input type="number" name="guests" min="1" value="1" required>
-
-      <label>आगमन तिथि *</label>
-      <input type="date" name="checkin" required>
-
-      <label>प्रस्थान तिथि *</label>
-      <input type="date" name="checkout" required>
-
-      <label>आवास प्रकार</label>
-      <select name="room">
-        <option value="">-- चुनें --</option>
-        <option value="Private">Private Room</option>
-        <option value="Dormitory">Dormitory</option>
-        <option value="Suite">Suite</option>
-      </select>
-
-      <label>नोट्स</label>
-      <textarea name="notes" rows="4"></textarea>
-
-      <button type="submit">बुकिंग सबमिट करें</button>
+      <label>आपका संदेश:</label>
+      <textarea name="message" rows="4"></textarea>
+      <button type="submit">सबमिट करें</button>
     </form>
-  </main>
+  </section>
 
   <footer>
-    <p>📞 9211872947 | 📧 info@yoggrambooking.com</p>
-    <p>© <span id="year"></span> YogGram | Powered by Cloudflare Pages</p>
+    <p>📞 संपर्क: 9211872947 | ✉️ info@yoggrambooking.com</p>
+    <p>© 2025 Yoggram Haridwar</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
